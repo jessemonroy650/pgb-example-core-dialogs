@@ -6,7 +6,7 @@ This app uses the Cordova 'device' and 'dialogs' plugin.
 * https://www.npmjs.com/package/cordova-plugin-device
 * https://www.npmjs.com/package/cordova-plugin-dialogs
 
-This app also demonstrates how to use the 'this'  correctly, and how to use a 'Touch' event instead of the 'click' event.
+This app also demonstrates how to use a 'Touch' event (touchend) instead of the 'click' event.
 
 * https://www.w3schools.com/jsref/dom_obj_event.asp
 

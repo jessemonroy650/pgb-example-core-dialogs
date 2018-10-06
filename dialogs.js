@@ -29,12 +29,9 @@ var dialogsPlugin = {
 	confirm : function () {
         document.getElementById('status0').innerHTML = "confirm() called";
         // Android has a maximum of three (3) buttons.
-        // for how the 'this' operator is working see:
-        // https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/using-this-correctly.md
-        var geeneric = this.genericCallback.bind(this);
         navigator.notification.confirm(
             "The plugin.confirm() message",
-            geeneric,
+            dialogsPlugin.genericCallback,
             "confirm title",
             ['button 1', 'button 2', 'button 3']
         );
@@ -49,7 +46,8 @@ var dialogsPlugin = {
             "The plugin.prompt() message",
             promptResponseCallback,
             "prompt title",
-            ['button 1', 'button 2', 'button 3']
+            ['button 1', 'button 2', 'button 3'],
+            "default response"
         );
         document.getElementById('dialogStatus').innerHTML = "prompt button pressed";
     },
@@ -58,8 +56,7 @@ var dialogsPlugin = {
         document.getElementById('status0').innerHTML = "beep() called";
         navigator.notification.beep(4);
     },
-    // We are breaking modularity rules to make a specific point about how to use 'this'.
-    // Namely, we only ever expect this particular function to be called with via the confirm() function.
+    //
     genericCallback : function (index) {
         document.getElementById('dialogCallback').innerHTML = "confirm() button: " + index;
     }
