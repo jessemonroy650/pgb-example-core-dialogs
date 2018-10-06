@@ -59,7 +59,7 @@ function deviceStuff() {
 }
 //
 function onDeviceReady() {
-    alert("device ready.");
+    //alert("device ready.");
     document.getElementById('isCordovaApp').innerHTML  = isCordovaApp(window.cordova);
     document.getElementById('isKnownDevice').innerHTML = isKnownDevice(navigator.platform);
     document.getElementById('appVersion').innerHTML    = app.version;
