@@ -54,7 +54,7 @@ var dialogsPlugin = {
     //
 	beep : function () {
         document.getElementById('status0').innerHTML = "beep() called";
-        navigator.notification.beep(4);
+        navigator.notification.beep(3);
     },
     //
     genericCallback : function (index) {

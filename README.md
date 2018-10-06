@@ -17,4 +17,4 @@ This app also demonstrates how to use a 'Touch' event (touchend) instead of the 
 * alert
 * confirm
 * prompt
-* beep
+* beep - The app will beep three (3) times.
