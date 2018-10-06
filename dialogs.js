@@ -31,9 +31,10 @@ var dialogsPlugin = {
         // Android has a maximum of three (3) buttons.
         // for how the 'this' operator is working see:
         // https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/using-this-correctly.md
+        var geeneric = this.genericCallback.bind(this);
         navigator.notification.confirm(
             "The plugin.confirm() message",
-            this.genericCallback.bind(this),
+            geeneric,
             "confirm title",
             ['button 1', 'button 2', 'button 3']
         );
@@ -65,6 +66,6 @@ var dialogsPlugin = {
 }
 //
 function promptResponseCallback(buttonIdx) {
-    document.getElementById('dialogCallback').innerHTML = "prompt() button: " + buttonIdx
+    document.getElementById('dialogCallback').innerHTML = "prompt() button: " + JSON.stringify(buttonIdx);
 }
 
