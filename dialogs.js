@@ -8,10 +8,11 @@ var dialogsPlugin = {
     hook : function () {
         document.getElementById('status0').innerHTML = "hook() called";
         // You can listen to 'click', but 'touch' by passes the inherent delay.
+        // See: https://www.w3schools.com/jsref/dom_obj_event.asp
         document.getElementById("alertButton").addEventListener("click", dialogsPlugin.alert, false);
-        document.getElementById("confirmButton").addEventListener("touch", dialogsPlugin.confirm, false);
-        document.getElementById("promptButton").addEventListener("touch", dialogsPlugin.prompt, false);
-        document.getElementById("beepButton").addEventListener("touch", dialogsPlugin.beep, false);
+        document.getElementById("confirmButton").addEventListener("touchend", dialogsPlugin.confirm, false);
+        document.getElementById("promptButton").addEventListener("touchend", dialogsPlugin.prompt, false);
+        document.getElementById("beepButton").addEventListener("touchend", dialogsPlugin.beep, false);
     },
     //
 	alert : function () {
