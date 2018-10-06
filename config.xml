@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.bsdmasterindex.pgb-example-core-dialogs"
+        version     = "1.0.0"
+        versionCode = "10" >
+        <!-- versionCode is optional and Android only -->
+        <!-- https://build.phonegap.com/current-support -->
+        <preference name="phonegap-version" value="cli-6.0.0" />
+
+        <name>PGB Example Core Dialogs</name>
+        <description>PGB Example of Cordova Core plugin: 'Dialogs'</description>
+        <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">
+        Jesse Monroy
+        </author>
+
+        <!-- Android SECTION -->
+        <platform name="android" />
+
+        <!-- PLUGINS PLUGINS -->
+        <!-- device required so we can detect if we are using iOS -->
+        <plugin name="cordova-plugin-device" spec="~2.0.2" />
+        <plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
+
+    </widget>

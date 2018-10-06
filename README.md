@@ -1,5 +1,16 @@
 # pgb-example-core-dialogs
 PGB Example Core using the Cordova 'Dialogs' plugin using cli-6.0.0
 
-*https://www.npmjs.com/package/cordova-plugin-dialogs
-<plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
+This app uses the Cordova 'device' and 'dialogs' plugin.
+
+* https://www.npmjs.com/package/cordova-plugin-device
+* https://www.npmjs.com/package/cordova-plugin-dialogs
+
+**NOTE** Three of the four methods available in this plugin are available on most platforms via the BOM (Browser Object Model) See: https://github.com/jessemonroy650/pgb-example-window
+
+## Methods
+
+* alert
+* confirm
+* prompt
+* beep

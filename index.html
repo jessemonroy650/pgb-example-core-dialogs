@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class=height100percent>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PGB Core 'Device' plugin</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="buttons.css" />
+    <style>
+    body {margin:0px;font-size:large;}
+    .hidden {visibility:collapse;display:none;}
+    .expose {visibility:visible;display:block;} /* Here for completeness only. */
+    .height100percent {height:100%} 
+    .copyright {padding:5px;font-style:italic;font-size:small;}
+    .spacer {margin:0.5em;}
+    #header {margin:0;padding:0;}
+    #exitApp {margin:1em;float:right;}
+    /* app specific */
+    #uuid {font-size:small;}
+    /* app specific - background colors */
+    .r {background-color:hsl(0,25%,75%);}   /* pastel-red */
+    .g {background-color:hsl(135,25%,75%);} /* pastel-gree */
+    .b {background-color:hsl(225,25%,75%);} /* pastel-blue */
+    .a {background-color:hsl(45,25%,75%);}  /* pastel-gold */
+    .p {background-color:hsl(270,25%,75%);} /* pastel-purple */
+    </style>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="app.js"></script>
+    <script type="text/javascript" charset="utf-8" src="dialogs.js"></script>
+</head>
+<body onload="onLoad()" class=height100percent>
+    <div id=header class="button button-block button-large">
+        <img align=left src=favicon-48x48.png>
+        PGB Core 'Device' plugin
+        <button id=exitApp onclick='navigator.app.exitApp()' class="button button-pill button-primary button-large" style="margin:0.1em;float:right;">Exit</button>
+    </div>
+
+    <h3>App Version v<span id=appVersion></span></h3>
+
+    <div><b>Status0:</b> <span id=status0>status0 unknown</span><br></div>
+    <div><b>Dialog Status:</b> <span id=dialogStatus>dialog status</span><br></div>
+    <div><b>Dialog Callback:</b> <span id=dialogCallback>dialog callback</span><br></div>
+
+    <p class=spacer />
+
+    <button id=alertButton   class="button button-pill button-large" style="margin:0.1em;">alertButton</button><br />
+    <button id=confirmButton class="button button-pill button-large" style="margin:0.1em;">confirmButton</button><br />
+    <button id=promptButton  class="button button-pill button-large" style="margin:0.1em;">promptButton</button><br />
+    <button id=beepButton    class="button button-pill button-large" style="margin:0.1em;">beepButton</button><br />
+
+    <p class=spacer />
+    <b>navigator.appCodeName:</b> <span id=navCodeName>false</span><br>
+    <b>navigator.appName:</b> <span id=navName>false</span><br>
+    <b>navigator.appVersion:</b> <span id=navVersion>false</span><br>
+    <b>navigator.platform:</b>  <span id=navPlatform>false</span><br>
+    <b>isCordovaApp:</b> <span id=isCordovaApp>false</span><br>
+    <b>isKnownDevice:</b> <span id=isKnownDevice>false</span><br>
+
+    <h3>corova.device</h3>
+    <div id=deviceStuff>cordova.device NOT LOADED</div>
+
+    <div class="copyright">
+        <span id=copyright>Created by Jesus Monroy, Jr. &copy; 2018</span>
+    </div>
+</body>
+    <script type="text/javascript" type="text/javascript">
+    //
+    //
+    //
+    function onLoad() { alert("body loaded."); }
+    //
+    // The 'DOMContentLoaded' event fires before the 'deviceready'
+    //
+    document.addEventListener('DOMContentLoaded', onDOMContentLoaded, false);
+    //
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    </script>
+</html>
