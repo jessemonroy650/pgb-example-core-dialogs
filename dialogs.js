@@ -6,14 +6,16 @@ var dialogsPlugin = {
     },
     // Register your function that will call the dialogs
     hook : function () {
+        document.getElementById('status0').innerHTML = "hook() called";
         // You can listen to 'click', but 'touch' by passes the inherent delay.
-        document.getElementById("alertButton").addEventListener("touch", dialogsPlugin.alert, false);
+        document.getElementById("alertButton").addEventListener("click", dialogsPlugin.alert, false);
         document.getElementById("confirmButton").addEventListener("touch", dialogsPlugin.confirm, false);
         document.getElementById("promptButton").addEventListener("touch", dialogsPlugin.prompt, false);
         document.getElementById("beepButton").addEventListener("touch", dialogsPlugin.beep, false);
     },
     //
 	alert : function () {
+        document.getElementById('status0').innerHTML = "alert() called";
         navigator.notification.alert(
             "The plugin.alert() message",
             function () { document.getElementById('dialogCallback').innerHTML = "Alert() dismissed" },
