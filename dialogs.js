@@ -2,7 +2,7 @@ var dialogsPlugin = {
     version : '1.0.0',
 
     init : function () {
-        return JSON.stringify(navigator.notification);
+        return navigator.notification;
     },
     // Register your function that will call the dialogs
     hook : function () {
